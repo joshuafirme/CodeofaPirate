@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AuthenticationCtr;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('main');
 });
+
+Route::get('auth/google', [AuthenticationCtr::class, 'redirectToGoogle']);
+Route::get('auth/google/callback', [AuthenticationCtr::class, 'handleGoogleCallback']);

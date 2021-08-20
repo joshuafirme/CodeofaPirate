@@ -1,5 +1,5 @@
 <!-- navbar -->
-<div class="navbar navbar-default navbar-static-top" role="navigation">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container">
 
 		<div class="navbar-header"   style="margin-left: -20px;"  class="pull-left">
@@ -17,21 +17,22 @@
 
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li>
-					<a href="#"> Products</a>
-				</li>
+				
 			</ul>
 
 			<ul class="nav navbar-nav pull-right">
 				<li>
-					<a href="#">
-					 	Log In
+					<a href="#products-container"> Products</a>
+				</li>
+				<li>
+					<a href="#signup-container">
+					 	Sign up
 					</a>
 				</li>
 
 				<li>
 					<a href="#">
-						Register
+						About
 					</a>
 				</li>
 			</ul>
@@ -40,3 +41,4 @@
 	</div>
 </div>
 <!-- /navbar -->
+
