@@ -29,66 +29,25 @@
 <div id="products-container"></div>
 <p class="title" style="text-align: center;">Source Codes Products</p> 
 
+    @foreach ($product as $data)
     <div class="responsive col-sm-12 col-md-6">
-        <div class="gallery">
-          <a target="_blank" href="images/products/home.png">
-            <img class="img-thumbnail" src="images/laravel.png" alt="Forest" width="600">
-          </a>
-          <div class="card-body">
-            <p>Laravel CRUD</p>
-            <p>Make 2021 the year you learn to code. Change your career, change your life. Through this site, we can help you do that. 
-              Enjoy high-quality ready made programming products at cheap cost!
-            </p>
-            <button class="btn btn-sm btn-default">Tutorial</button>
-            <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download source code</a>
-          </div>
+      <div class="gallery">
+        <img class="img-thumbnail" src="storage/{{$data->image}}" alt="Forest" width="600">
+        <div class="card-body">
+          <p>{{$data->title}}</p>
+          @php
+            if(strlen($data->description) > 150) {
+           //   $data->description = substr($data->description, 0, 150)."...";
+            }
+          @endphp
+          <p  style="height: 50px;">{{$data->description}}</p>
+          <h3>${{$data->price}}</h3>
+          <button class="btn btn-sm btn-default">Tutorial</button>
+          <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download source code</a>
         </div>
       </div>
-      
-      <div class="responsive col-sm-12 col-md-6">
-        <div class="gallery">
-          <a target="_blank" href="images/products/cart.png">
-            <img class="img-thumbnail" src="images/products/laravel-api.jpg" alt="Forest" width="600">
-          </a>
-          <div class="card-body">
-              <p>Laravel CRUD</p>
-              <p>Make 2021 the year you learn to code. Change your career, change your life. Through this site, we can help you do that. 
-                Enjoy high-quality ready made programming products at cheap cost!
-              </p>
-              <button class="btn btn-sm btn-default">Tutorial</button>
-              <button class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download source code</button>
-          </div>
-        </div>
-      </div>
-      
-      <div class="responsive col-sm-12 col-md-6">
-        <div class="gallery">
-          <a target="_blank" href="images/products/checkout.png">
-            <img class="img-thumbnail" src="images/products/covid19-tracker.jpg" alt="Northern Lights" width="600">
-          </a>
-          <div class="card-body">
-              <p>Covid19-Tracker Android App</p>
-              <p>Get a full functional source code of Covid19-Tracker Android App.</p>
-              <button class="btn btn-sm btn-default">Tutorial</button>
-              <button class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download source code</button>
-          </div>
-        </div>
-      </div>
-      
-      <div class="responsive col-sm-12 col-md-6">
-        <div class="gallery">
-          <a target="_blank" href="images/products/checkout.png">
-            <img class="img-thumbnail" src="images/products/gcash-test-payment.png" alt="Mountains" width="600">
-          </a>
-          <div class="card-body">
-              <p>Laravel CRUD</p>
-              <p>Make 2021 the year you learn to code. Change your career, change your life.
-              </p>
-              <button class="btn btn-sm btn-default">Tutorial</button>
-              <button class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download source code</button>
-          </div>
-        </div>
-      </div>
+    </div>
+    @endforeach
 
 
 </div>

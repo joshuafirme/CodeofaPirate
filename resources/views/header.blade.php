@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title><?php echo isset($page_title) ? strip_tags($page_title) : "Code of a Pirate"; ?></title>
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 	<link href="{{ asset("css/custom-css.css") }}" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
