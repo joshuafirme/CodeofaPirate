@@ -21,6 +21,10 @@ Route::get('/', function () {
                 ->get();
     return view('main',['product' => $product]);
 });
+Route::get('login', function () {
+    return view('login');
+});
+Route::get('logout', [AuthenticationCtr::class, 'logout']);
 
 Route::get('auth/google', [AuthenticationCtr::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [AuthenticationCtr::class, 'handleGoogleCallback']);

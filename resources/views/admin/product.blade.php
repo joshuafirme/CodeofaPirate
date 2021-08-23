@@ -1,5 +1,5 @@
 @php
-    $page_title = "Products"
+    $page_title = "Code of a Pirate | Products"
 @endphp
 
 @include('header')
@@ -42,6 +42,7 @@
                         <th>Description</th> 
                         <th>Category</th>   
                         <th>Price</th>
+                        <th>Tutorial link</th>
                         <th>Download link</th>
                         <th style="width: 100px;">Action</th>
                     </tr>
@@ -53,6 +54,7 @@
                     <td>{{ $data->description }}</td>
                     <td>{{ $data->category }}</td>
                     <td>{{ $data->price }}</td>
+                    <td>{{ $data->tutorial_link }}</td>
                     <td>{{ $data->file_path }}</td>
                     <td>
                         <a class="btn btn-sm btn-primary btn-edit" product-id={{ $data->id }} data-toggle="modal" data-target="#editProductModal"><i class="fa fa-edit"></i></a>

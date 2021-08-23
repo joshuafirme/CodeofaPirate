@@ -37,10 +37,10 @@
           <p>{{$data->title}}</p>
           @php
             if(strlen($data->description) > 150) {
-           //   $data->description = substr($data->description, 0, 150)."...";
+              $data->description = substr($data->description, 0, 150)."...";
             }
           @endphp
-          <p  style="height: 50px;">{{$data->description}}</p>
+          <p  style="height: 35px;">{{$data->description}}</p>
           <h3>${{$data->price}}</h3>
           <button class="btn btn-sm btn-default">Tutorial</button>
           <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download source code</a>

@@ -10,9 +10,20 @@ use Illuminate\Support\Facades\Hash;
 use Laravel\Socialite\Facades\Socialite;
 use Exception;
 use Auth;
+use Session;
 
 class AuthenticationCtr extends Controller
 {
+    public function logIn()
+    {
+        $data = Input::all();
+
+        if (Auth::attempt(['email' => $data['phone_email'], $password => $data['password']])) 
+        {
+            return redirect()->intended('/');  
+        }
+    }
+
     public function redirectToGoogle()
     {
         return Socialite::driver('google')->redirect();
@@ -27,11 +38,13 @@ class AuthenticationCtr extends Controller
             $finduser = User::where('email', $user->email)->first();
             
             if($finduser){
-                
                 Auth::login($finduser);
+                Session::put('avatar', $user->avatar);
+                Session::put('email', $user->name);
                 return redirect()->intended('/');
-       
             }else{
+                Session::put('avatar', $user->avatar);
+                Session::put('name', $user->email);
                 $newUser = User::create([
                     'name' => $user->name,
                     'email' => $user->email,
@@ -47,5 +60,12 @@ class AuthenticationCtr extends Controller
         } catch (Exception $e) {
             dd($e->getMessage());
         }
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        Session::flush();
+        return redirect()->intended('/');
     }
 }

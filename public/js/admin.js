@@ -20,6 +20,7 @@ $(document).ready(function () {
                 $('#description').val(response[0].description);
                 $('#price').val(response[0].price);
                 $('#category').val(response[0].category_id);
+                $('#tutorial_link').val(response[0].tutorial_link);
                 $('#file_path').val(response[0].file_path);
 
                 if (response[0].image !== null) {

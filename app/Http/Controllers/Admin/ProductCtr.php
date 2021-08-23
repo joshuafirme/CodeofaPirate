@@ -38,6 +38,7 @@ class ProductCtr extends Controller
         $product->description = $data['description'];
         $product->category_id = $data['category'];
         $product->price = $data['price'];
+        $product->tutorial_link = $data['tutorial_link'];
         $product->file_path = $data['file_path'];
 
         $product->save();
@@ -65,6 +66,7 @@ class ProductCtr extends Controller
         $product->description = $data['description'];
         $product->category_id = $data['category'];
         $product->price = $data['price'];
+        $product->tutorial_link = $data['tutorial_link'];
         $product->file_path = $data['file_path'];
 
         Product::where('id', $product->id)
@@ -73,6 +75,7 @@ class ProductCtr extends Controller
             'description' => $product->description,
             'category_id' => $product->category_id,
             'price' => $product->price,
+            'tutorial_link' => $product->tutorial_link,
             'file_path' => $product->file_path,
             ]);
 

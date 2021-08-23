@@ -44,6 +44,9 @@ div#blueimp-gallery div.modal {
     overflow: visible;
 
 }
+.navbar a {
+    margin-top: 20px !important;
+}
 
 .form-signin
 {
@@ -253,6 +256,7 @@ margin: 0 10px;
 footer {
 padding: 20px;
 background: #222222;
+bottom: 0px;
 }
 
 .container-testimonial p {
@@ -278,3 +282,18 @@ border-radius: 4px;
 #btn-scroll-up {
 background-color: #555;
 }
+
+.navbar-brand {
+    padding: 0px; /* firefox bug fix */
+  }
+  .navbar-brand img{
+    height: 40px;
+    width: 40px;
+    margin-top: -20px !important;
+  }
+
+  .navbar-collapse a {
+    margin-top: 10px !important;
+  }
+
+  

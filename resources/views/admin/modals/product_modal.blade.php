@@ -21,6 +21,10 @@
                     <textarea class="form-control" name="description" rows="4"></textarea>
                   </div>
                   <div class="col-md-12" style="margin-bottom: 15px;">
+                    <label class="col-form-label">Tutorial link</label>
+                    <input type="text" class="form-control" name="tutorial_link">
+                  </div>
+                  <div class="col-md-12" style="margin-bottom: 15px;">
                     <label class="col-form-label">Direcory</label>
                     <input type="text" class="form-control" name="file_path">
                   </div>
@@ -82,7 +86,10 @@
                     <label class="col-form-label">Description</label>
                     <textarea class="form-control" name="description" id="description" rows="4"></textarea>
                   </div>
-
+                  <div class="col-md-12" style="margin-bottom: 15px;">
+                    <label class="col-form-label">Tutorial link</label>
+                    <input type="text" class="form-control" name="tutorial_link" id="tutorial_link">
+                  </div>
                   <div class="col-md-12" style="margin-bottom: 15px;">
                     <label class="col-form-label">Direcory</label>
                     <input type="text" class="form-control" name="file_path" id="file_path">

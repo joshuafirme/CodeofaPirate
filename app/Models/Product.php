@@ -22,6 +22,7 @@ class Product extends Model
         'price',
         'categorty_id',
         'image',
+        'tutorial_link',
         'file_path'
     ];
 }
