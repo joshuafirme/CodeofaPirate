@@ -179,6 +179,15 @@ box-sizing: border-box;
 padding: 10px 6px !important;
 }
 
+.btn-login{
+    display: block;
+    width: 100%;
+    height: 45px;
+    border-radius: 25px;
+    outline: none;
+    margin-top: 10px;
+}
+
 .btn-google{
 display: block;
 width: 100%;
@@ -187,9 +196,7 @@ border-radius: 25px;
 outline: none;
 color: black;
 border: 2px solid #31A24C;
-font-size: 11pt;
 color: #31A24C;
-font-family: 'Poppins', sans-serif;
 margin: 1rem 0;
 cursor: pointer;
 transition: .5s;
@@ -241,6 +248,7 @@ display:flex;
 justify-content:center;
 align-items: center;
 color:grey;
+margin-top: 10px;
 }
 
 #or:after,

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationCtr;
 use App\Http\Controllers\Admin\ProductCtr;
+use App\Http\Controllers\TutorialCtr;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,3 +36,5 @@ Route::post('admin/updateProduct', [App\Http\Controllers\Admin\ProductCtr::class
 Route::get('admin/getAllProducts', [ProductCtr::class, 'getAllProducts']);
 Route::get('admin/getOneProduct/{id}', [ProductCtr::class, 'getOneProduct']);
 Route::delete('admin/deleteProduct/{id}', [ProductCtr::class, 'deleteProduct']);
+
+Route::get('tutorial/covid19Tracker', [TutorialCtr::class, 'covid19Tracker']);

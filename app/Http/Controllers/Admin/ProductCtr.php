@@ -11,6 +11,11 @@ use Auth;
 
 class ProductCtr extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index () {
         $category = DB::table('tbl_category')->get();
         return view('admin/product',['product' => $this->getAllProducts(), 'category' => $category]);

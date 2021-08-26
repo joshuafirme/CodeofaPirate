@@ -20,9 +20,20 @@
 			<ul class="nav navbar-nav">
 				@if(Auth::check()) 
 					@if(Auth::user()->access_level == 2)
-					<li>
-						<a href="/admin/product"> Admin Products</a>
-					</li>
+					<li class="dropdown">
+					
+						@if(Auth::check())
+						<a href="/admin/product" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
+						
+							<ul class="dropdown-menu">
+								<li><a href="/admin/product">Product</a></li>
+								<li><a href="/admin/category">Category</a></li>
+							</ul>
+						@else
+						<a href="#" aria-expanded="false">{{ Auth::check() == true ? Auth::user()->name : "" }} </a>	
+						@endif	
+						
+					 </li>
 					@endif	
 				@endif	
 			</ul>

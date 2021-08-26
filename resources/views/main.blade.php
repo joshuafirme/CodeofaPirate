@@ -34,7 +34,7 @@
       <div class="gallery">
         <img class="img-thumbnail" src="storage/{{$data->image}}" alt="Forest" width="600">
         <div class="card-body">
-          <p>{{$data->title}}</p>
+          <b>{{$data->title}}</b>
           @php
             if(strlen($data->description) > 150) {
               $data->description = substr($data->description, 0, 150)."...";
@@ -42,7 +42,9 @@
           @endphp
           <p  style="height: 35px;">{{$data->description}}</p>
           <h3>${{$data->price}}</h3>
-          <button class="btn btn-sm btn-default">Tutorial</button>
+          @if($data->tutorial_link)
+            <a href="{{$data->tutorial_link}}" target="_blank" class="btn btn-sm btn-default">Tutorial</a>
+          @endif
           <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download source code</a>
         </div>
       </div>

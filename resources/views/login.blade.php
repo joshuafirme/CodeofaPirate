@@ -7,7 +7,7 @@ $page_title = "Code of a Pirate | Login";
 @include('header')
 
 <div  id="signup-container"></div>
-<div class="row signup-container">
+<div class="row signup-container" style="height: 700px">
 <div class="col-sm-12 col-md-5">
 <div class="card">
   <div class="card-body">
@@ -21,7 +21,7 @@ $page_title = "Code of a Pirate | Login";
         <label for="passwordInput">Password</label>
         <input type="password" class="form-control" id="passwordInput">
       </div>
-      <button type="submit" class="btn btn-primary">Log In</button>
+      <button type="submit" class="btn btn-primary btn-login" id="btn-login">Log In</button>
     </form>
     <div id="or">or</div>   
     <button onclick="location.href = 'auth/google';" type="button" class="btn-google">Log In with Google</button>
