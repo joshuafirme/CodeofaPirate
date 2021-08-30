@@ -1,4 +1,4 @@
-body{
+*{
     font-family: 'Roboto', sans-serif;
 }
 
@@ -10,6 +10,10 @@ body{
 .btn-primary:hover{
     background-color: #31934C !important;
     border-color: #31934C !important;
+}
+
+.tbl-features td{
+    line-height: 25px !important;
 }
 
 .margin-bottom-1em{
@@ -234,8 +238,27 @@ justify-content: center;
 text-align: center;
 }
 
+.swiper {
+    width: 100%;
+    height: 500px;
+  }
+  .swiper-button-prev, .swiper-button-next {
+      color: #8D8D8D !important;
+  }
+
+  .swiper-button-prev {
+}
+
 .img-thumbnail{
 border: none !important;
+}
+
+.fa-check {
+    color: #31A24C;
+}
+
+.fa-times {
+    color: #DC3545;
 }
 
 .card-text{

@@ -32,7 +32,7 @@
     @foreach ($product as $data)
     <div class="responsive col-sm-12 col-md-6">
       <div class="gallery">
-        <img class="img-thumbnail" src="storage/{{$data->image}}" alt="Forest" width="600">
+        <a href="{{$data->tutorial_link}}"><img class="img-thumbnail" src="storage/{{$data->image}}" alt="Forest" width="600"></a>
         <div class="card-body">
           <b>{{$data->title}}</b>
           @php
@@ -41,11 +41,7 @@
             }
           @endphp
           <p  style="height: 35px;">{{$data->description}}</p>
-          <h3>${{$data->price}}</h3>
-          @if($data->tutorial_link)
-            <a href="{{$data->tutorial_link}}" target="_blank" class="btn btn-sm btn-default">Tutorial</a>
-          @endif
-          <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download source code</a>
+       
         </div>
       </div>
     </div>

@@ -53,7 +53,7 @@
                     <td>{{ $data->title }}</td>
                     <td>{{ $data->description }}</td>
                     <td>{{ $data->category }}</td>
-                    <td>{{ $data->price }}</td>
+                    <td>${{ $data->price }}</td>
                     <td>{{ $data->tutorial_link }}</td>
                     <td>{{ $data->file_path }}</td>
                     <td>

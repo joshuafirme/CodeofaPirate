@@ -38,3 +38,4 @@ Route::get('admin/getOneProduct/{id}', [ProductCtr::class, 'getOneProduct']);
 Route::delete('admin/deleteProduct/{id}', [ProductCtr::class, 'deleteProduct']);
 
 Route::get('tutorial/covid19Tracker', [TutorialCtr::class, 'covid19Tracker']);
+Route::get('tutorial/laravelCRUD', [TutorialCtr::class, 'laravelCRUD']);

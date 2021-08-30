@@ -12,8 +12,24 @@
 <!-- bootstrap JavaScript -->
 <script src="{{asset('libs/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('libs/bootstrap/docs-assets/js/holder.js')}}"></script>
-
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script>
+  const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
 
   // password strength
 $('#passwordInput, #confirmPasswordInput').on('keyup', function(e) {
